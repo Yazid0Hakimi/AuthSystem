@@ -1,0 +1,36 @@
+###register
+
+POST http://localhost:5000/auth/register 
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "johndoe2@example.com",
+  "password": "secretpassword",
+  "picturePath": "",
+  "friends": [],
+  "location": "New York",
+  "occupation": "Developer"
+}
+//without Authorization
+###login
+POST http://localhost:5000/auth/login 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRGF0YSI6eyJfaWQiOiI2NDUyNWU5ZjBiMTcyOTJiNDY5YWU2M2QiLCJmaXJzdE5hbWUiOiJKb2huIiwibGFzdE5hbWUiOiJEb2UiLCJlbWFpbCI6ImpvaG5kb2UyQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkam95SUV4cUUwVTdMUkVJU0poUWxPLjJ1bGVJQzVuOUZhaXNOc0tDV0RUSkVuc1oxb1RXdHkiLCJwaWN0dXJlUGF0aCI6IiIsImZyaWVuZHMiOltdLCJsb2NhdGlvbiI6Ik5ldyBZb3JrIiwib2NjdXBhdGlvbiI6IkRldmVsb3BlciIsInZpZXdlZFByb2ZpbGVzIjo1MCwiaW1wcmVzc2lvbnMiOjE2LCJjcmVhdGVkQXQiOiIyMDIzLTA1LTAzVDEzOjE2OjE1Ljk0MloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTAzVDEzOjE2OjE1Ljk0MloiLCJfX3YiOjB9LCJpYXQiOjE2ODMxNjAyMDB9.mdEupNZd1kOrvvxMal4WRENb6L7MhUtu-0jtmChXltE
+
+{
+  "email": "johndoe2@example.com",
+  "password": "secretpassword"
+}
+
+//with Authorization
+###
+POST http://localhost:5000/auth/verify
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRGF0YSI6eyJfaWQiOiI2NDUyNWU5ZjBiMTcyOTJiNDY5YWU2M2QiLCJmaXJzdE5hbWUiOiJKb2huIiwibGFzdE5hbWUiOiJEb2UiLCJlbWFpbCI6ImpvaG5kb2UyQGV4YW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkam95SUV4cUUwVTdMUkVJU0poUWxPLjJ1bGVJQzVuOUZhaXNOc0tDV0RUSkVuc1oxb1RXdHkiLCJwaWN0dXJlUGF0aCI6IiIsImZyaWVuZHMiOltdLCJsb2NhdGlvbiI6Ik5ldyBZb3JrIiwib2NjdXBhdGlvbiI6IkRldmVsb3BlciIsInZpZXdlZFByb2ZpbGVzIjo1MCwiaW1wcmVzc2lvbnMiOjE2LCJjcmVhdGVkQXQiOiIyMDIzLTA1LTAzVDEzOjE2OjE1Ljk0MloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTAzVDEzOjE2OjE1Ljk0MloiLCJfX3YiOjB9LCJpYXQiOjE2ODMxNjAyMDB9.mdEupNZd1kOrvvxMal4WRENb6L7MhUtu-0jtmChXltE
+
+{
+  "email": "johndoe2@example.com",
+  "password": "secretpassword"
+}
