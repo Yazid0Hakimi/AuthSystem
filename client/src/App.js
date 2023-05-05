@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Register from "./components/Register.js";
+import Auth from "./components/Auth.js";
+import { Button, Container, Stack } from "@mui/material";
+
 
 function App() {
+  const [pageType, setPageType] = useState("logsin");
+  const isLogin = pageType === "login";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="sm">
+      <Stack
+        variant="contained"
+        direction={"row"}
+        justifyContent={"space-around"}
+        alignItems={"baseline"}
+        color="primary"
+      >
+        <Button onClick={() => setPageType("login")}>Login</Button>
+        <Button onClick={() => setPageType("register")}>Register</Button>
+      </Stack>
+      {isLogin ? <Auth /> : <Register />}
+    </Container>
   );
 }
 

@@ -13,7 +13,6 @@ Content-Type: application/json
   "location": "New York",
   "occupation": "Developer"
 }
-//without Authorization
 ###login
 POST http://localhost:5000/auth/login 
 Content-Type: application/json
@@ -24,7 +23,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRGF0YSI6eyJfa
   "password": "secretpassword"
 }
 
-//with Authorization
 ###
 POST http://localhost:5000/auth/verify
 Content-Type: application/json
